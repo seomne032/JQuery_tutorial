@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>jQuery lightbox</title>
+        <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>lightbox</h1>
+            <ul class="cards">
+                <li>
+                    <img
+                        src="../image/img_01.jpg"
+                        data-img="../image/img_01_b.jpg"
+                    />
+                </li>
+                <li>
+                    <img
+                        src="../image/img_02.jpg"
+                        data-img="../image/img_02_b.jpg"
+                    />
+                </li>
+                <li>
+                    <img
+                        src="../image/img_03.jpg"
+                        data-img="../image/img_03_b.jpg"
+                    />
+                </li>
+                <li>
+                    <img
+                        src="../image/img_04.jpg"
+                        data-img="../image/img_04_b.jpg"
+                    />
+                </li>
+            </ul>
+            <div class="dimm">
+                <img src="" alt="" />
+            </div>
+        </div>
+
+        <script>
+            var items = $('.cards li');
+            var dimm = $('.dimm');
+            var dimmImg = dimm.find('img');
+
+            items.click(function () {
+                // d
+                var dataImg = $(this).find('img').attr('data-img');
+
+                dimm.addClass('show');
+                dimmImg.attr('src', dataImg);
+
+                dimm.click(function () {
+                    $(this).removeClass('show');
+                });
+            });
+        </script>
+    </body>
+</html>
