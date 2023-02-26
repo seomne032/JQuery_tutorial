@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>jQuery tab</title>
+        <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>tab</h1>
+
+            <ul class="tab">
+                <li><a href="#x">tab1</a></li>
+                <li><a href="#x">tab2</a></li>
+                <li><a href="#x">tab3</a></li>
+                <li><a href="#x">tab4</a></li>
+            </ul>
+
+            <div class="content"><img src="../image/img_01.jpg" alt="" /></div>
+            <div class="content"><img src="../image/img_02.jpg" alt="" /></div>
+            <div class="content"><img src="../image/img_03.jpg" alt="" /></div>
+            <div class="content"><img src="../image/img_04.jpg" alt="" /></div>
+        </div>
+
+        <script>
+            var btns = $('.tab li');
+            var contents = $('.content');
+
+            // btns에서 a를 찾아서 active를 붙인다
+            btns.eq(0).find('a').addClass('active');
+            // contents를 모두 숨긴 후 첫번째만 보이게 한다
+            contents.hide().eq(0).show();
+
+            // 클릭이벤트
+            btns.click(function () {
+                // li에서 a를 찾아서 active를 없앤다
+                btns.find('a').removeClass('active');
+                // 내가 클릭한 li에서 a를 찾아서 active를 붙인다
+                $(this).find('a').addClass('active');
+
+                // 클릭한 li의 인덱스를 i에 저장한다
+                var i = $(this).index();
+                // contents를 모두 숨긴 후 내가 클릭한 인덱스의 li만 보이게한다
+                contents.hide().eq(i).show();
+            });
+        </script>
+    </body>
+</html>

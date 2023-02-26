@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>jQuery tab2</title>
+        <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="./style2.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>tab2</h1>
+
+            <section>
+                <ul class="tab">
+                    <li class="active"><a href="#x">tab1</a></li>
+                    <li><a href="#x">tab2</a></li>
+                    <li><a href="#x">tab3</a></li>
+                </ul>
+
+                <div class="content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Assumenda aperiam dolorum porro repellat, dolore corrupti
+                    harum mollitia repudiandae explicabo nam quos, incidunt
+                    officia, iure numquam ex in cupiditate sunt! Molestias
+                    dignissimos incidunt deleniti fugit facere et distinctio
+                    sunt mollitia voluptatem.
+                </div>
+                <div class="content">
+                    바로 청춘에서만 만물은 가치를 것이다. 되는 인간의 않는 주며,
+                    방황하였으며, 봄바람이다. 길을 이것이야말로 천고에 있다.
+                    눈에 피어나는 못할 사람은 못하다 얼음이 이것이다. 것은 청춘
+                    얼마나 무한한 불러 봄바람이다. 싸인 굳세게 고동을 것이다.
+                    그러므로 같지 것은 봄바람을 운다. 새가 대한 피가 되는
+                    생생하며, 사랑의 능히 하였으며, 것이다. 인간이 갑 이상은
+                    같으며, 가치를 밝은 피다. 하였으며, 뛰노는 무엇이 이것은
+                    예수는 있다. 얼마나 과실이 이상 길을 크고 것이다.
+                </div>
+                <div class="content">
+                    보배를 든 피가 갑 그들은 대고, 영락과 피는 위하여서.
+                    피어나기 원질이 열락의 끝까지 인간의 이것이다. 돋고, 만물은
+                    긴지라 이는 듣는다. 없으면, 넣는 무한한 주며, 보이는
+                    날카로우나 있으랴? 있으며, 날카로우나 넣는 우리 열락의
+                    칼이다. 그들을 끝까지 놀이 일월과 풀이 열매를 피다. 풀이
+                    커다란 인간은 청춘의 있다. 능히 풍부하게 시들어 그들에게 이
+                    같은 이것이다. 관현악이며, 행복스럽고 타오르고 인간에 청춘은
+                    인생의 만물은 이것이야말로 사랑의 있는가? 모래뿐일 충분히
+                    천지는 이상이 위하여, 두기 이것이다.
+                </div>
+            </section>
+        </div>
+
+        <script>
+            var btns = $('.tab li');
+            var contents = $('.content');
+
+            btns.eq(0).addClass('active');
+            contents.hide().eq(0).show();
+
+            btns.click(function () {
+                btns.removeClass('active');
+                $(this).addClass('active');
+
+                contents.hide();
+                contents.eq($(this).index()).show();
+            });
+        </script>
+    </body>
+</html>
