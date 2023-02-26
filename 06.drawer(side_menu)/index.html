@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>jQuery drawer</title>
+        <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Drawer</h1>
+        </div>
+        <div class="side">
+            <div class="banner"></div>
+            <ul>
+                <li>Html</li>
+                <li>Css</li>
+                <li>Javascript</li>
+                <li>jQuery</li>
+                <li>React</li>
+            </ul>
+            <div class="banner"></div>
+            <div class="banner"></div>
+            <div class="banner"></div>
+            <div class="btn">
+                <img src="../image/open.png" alt="" />
+            </div>
+        </div>
+
+        <script>
+            $('.btn').click(function () {
+                $('.side').toggleClass('active');
+                if ($('.side').hasClass('active')) {
+                    // side가 active를 가지고 있으면 버튼의 이미지를 close로 변경
+                    $(this).find('img').attr('src', '../image/close.png');
+                } else {
+                    // side가 active를 안가지고 있으면 버튼의 이미지를 open으로 변경
+                    $(this).find('img').attr('src', '../image/open.png');
+                }
+            });
+        </script>
+    </body>
+</html>

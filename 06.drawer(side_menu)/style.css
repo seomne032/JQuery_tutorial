@@ -1,0 +1,45 @@
+body {
+    background-color: #ddd;
+}
+.container {
+    max-width: 100% !important;
+    width: 100%;
+}
+.side {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background-color: #f5f5f5;
+    padding: 36px;
+    text-align: center;
+    transition: all 0.3s;
+}
+.active {
+    right: 0;
+}
+.banner {
+    background-color: #ddd;
+    height: 100px;
+    margin: 10px 0;
+}
+ul {
+    margin: 16px 0;
+}
+ul li {
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+}
+ul li:last-child {
+    border-bottom: none;
+}
+.btn {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: -40px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
