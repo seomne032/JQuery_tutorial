@@ -1,0 +1,25 @@
+.main {
+    width: 600px;
+    margin: 0 auto;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    margin: 10px 0;
+    position: relative;
+}
+.btns {
+    margin-top: 20px;
+}
+.box1 {
+    background-color: orange;
+}
+.box2 {
+    background-color: blueviolet;
+}
+.box3 {
+    background-color: olive;
+}
+.box4 {
+    background-color: gray;
+}
